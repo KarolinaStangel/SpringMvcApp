@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Witaj w Thymeleafie!</title>
+    <link href="/webjars/materializecss/0.96.0/css/materialize.css"
+          type="text/css" rel="stylesheet" media="screen.projection">
+</head>
+<body>
+<div class="row">
+<h2 class="indigo-text center"
+        th:text="|Wyniki wyszikiwania: ${search}|">Witaj w Html!</h2>
+<ul class="collection">
+    <li th:each="tweet : ${tweets}">
+        <span class="title" th:text="${tweet}"></span>
+        <p th:text="${tweet}">Treść tweeta</p>
+    </li>
+</ul>
+</div>
+
+<script src="/webjars/jquery/2.1.4/jquery.js"></script>
+<script src="/webjars/materializecss/0.96.0/js/materialize.js"></script>
+</body>
+</html>
